@@ -5,3 +5,4 @@ from django.db import models
 
 class Property(models.Model):
     name = models.CharField(max_length=100)
+    address = models.ForeignKey("core.Address", null=True,  on_delete=models.CASCADE)
